@@ -1,0 +1,42 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+    <div th:if="${message}">
+        <h2 th:text="${message}"/>
+    </div>
+
+    <div class="camcontent">
+        <video id="video" autoplay="autoplay"></video>
+        <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+    </div>
+
+    <!--<div>
+        <form method="POST" enctype="multipart/form-data" action="/">
+            <table>
+                <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
+                <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+            </table>
+        </form>
+    </div>-->
+    <br/>
+    <div class="cambuttons">
+        <button id="snap" style="display:none;">  Capture </button>
+        <button id="reset" style="display:none;">  Reset  </button>
+        <!--<button id="upload" style="display:none;"> Upload </button>-->
+        <br/> <span id="uploading" style="display:none;"> Uploading has begun . . .  </span>
+             <span id="uploaded"  style="display:none;"> Success, your photo has been uploaded!
+                    <!--<a href="javascript:history.go(-1)"> Return </a>--> </span>
+    </div>
+
+    <div>
+        <ul>
+            <li th:each="file : ${files}">
+                <a th:href="${file.href}" th:text="${file.rel}" />
+            </li>
+        </ul>
+    </div>
+    <link th:href="@{text.css}" href="text.css"  rel="stylesheet" type="text/css"  />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="text.js"/>
+</body>
+</html>

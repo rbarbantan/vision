@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Electric';
+    src: url('budmo.ttf');
+}
+
+@font-face {
+    font-family: 'Electric-solid';
+    src: url('budmo_solid.ttf');
+}
+
+body {
+    text-align: center;
+    background-color: #000;
+}
+button {
+    width: 640px;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: x-large;
+    background-color: #666;
+    color: #ff0;
+    padding: 0;
+    border: none;
+    font-family: Electric;
+    margin-bottom: 16px;
+
+}
+
+button:hover {
+        background-color: #ff0;
+        color: #000;
+        cursor: pointer;
+}
+
+#uploaded, #uploading {
+    font-family: Electric-solid;
+    color: #ff0;
+
+}
