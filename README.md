@@ -22,4 +22,4 @@ java -jar target/vision-1.0-SNAPSHOT.jar
 ```
 
 ##Expected output
-![coffee](/img/coffee.png?raw=true =640x)
+<img alt="coffee" src="img/coffee.png?raw=true" width="640">
